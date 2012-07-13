@@ -1,0 +1,678 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-SymbolicName: org.eclipse.e4.ui.workbench.renderers.swt;singlet
+ on:=true
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
+ rm/eclipse.platform.ui.git;path="bundles/org.eclipse.e4.ui.workbench.
+ renderers.swt";tag=v20120523-1955
+Require-Bundle: org.eclipse.e4.ui.workbench;bundle-version="0.9.0",org
+ .eclipse.e4.core.services;bundle-version="0.9.0",org.eclipse.e4.core.
+ contexts;bundle-version="1.0.0",org.eclipse.e4.core.di;bundle-version
+ ="1.1.0",org.eclipse.e4.ui.services;bundle-version="0.9.0",org.eclips
+ e.swt;bundle-version="[3.5.0,4.0.0)",org.eclipse.jface;bundle-version
+ ="[3.5.0,4.0.0)",org.eclipse.e4.ui.workbench.swt;bundle-version="0.9.
+ 0",org.eclipse.e4.ui.model.workbench;bundle-version="0.9.0",org.eclip
+ se.osgi.services;bundle-version="[3.2.0,4.0.0)",org.eclipse.e4.core.c
+ ommands;bundle-version="0.9.0",org.eclipse.e4.ui.bindings;bundle-vers
+ ion="0.9.0",org.eclipse.equinox.common;bundle-version="[3.6.0,4.0.0)"
+ ,org.eclipse.core.expressions;bundle-version="[3.4.200,4.0.0)",org.ec
+ lipse.e4.ui.css.swt.theme;bundle-version="0.9.0",org.eclipse.e4.ui.cs
+ s.core;bundle-version="0.9.0",org.eclipse.osgi;bundle-version="[3.6.0
+ ,4.0.0)",org.eclipse.e4.ui.di;bundle-version="0.9.0"
+Bundle-Activator: org.eclipse.e4.ui.internal.workbench.renderers.swt.S
+ WTRenderersActivator
+Export-Package: org.eclipse.e4.ui.internal.workbench.renderers.swt;x-internal:=true,
+ org.eclipse.e4.ui.workbench.renderers.swt;x-friends:="org.eclipse.ui.workbench,org.eclipse.e4.ui.workbench.addons.swt"
+Bundle-Version: 0.10.1.v20120523-1955
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Import-Package: javax.annotation;version="1.0.0",javax.inject;version=
+ "1.0.0"
+Bundle-ManifestVersion: 2
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$12.class
+SHA1-Digest: AntIRvETE/b/CCB0QeFabBJ4XuU=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolItemRenderer$1.cla
+ ss
+SHA1-Digest: awybDo5ZpuUKghq6MNolpypEopA=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/CSSEngineHelper.class
+SHA1-Digest: 9GNR9OX7A1xmffOxHT7GpI9P2bw=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SashLayout$3.class
+SHA1-Digest: 4msdBv4t13FdTMFEEmvku91oUxQ=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$16.class
+SHA1-Digest: vdPX5eeB47XsUaW7v4+lWuwqBRc=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/DirectMenuItemRenderer
+ .class
+SHA1-Digest: wNdjMfdXmkqwaO3o4GqsIDmjmHU=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/AreaRenderer$2.class
+SHA1-Digest: 1JKV2K9UuDo8FaL2iQJAXDhuVAw=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/TrimBarLayout$TrimLine
+ .class
+SHA1-Digest: B3t6XI06ts9bhlw98fXXw/VlhBs=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolItemRenderer$5.cla
+ ss
+SHA1-Digest: sXI4PU50WbXxqGm+XL033g5oHnY=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolBarManagerRenderer
+ $1.class
+SHA1-Digest: 6frbquW1uKNBAgqZ7uzYEk6/qHU=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/CTabRendering.class
+SHA1-Digest: fhLl3Jar+37N6SPSfHCxb5UNKB8=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/SWTRenderersM
+ essages.class
+SHA1-Digest: scsoYMrCEQNWTR7Hdoqq8GkIGJE=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolItemRenderer$9.cla
+ ss
+SHA1-Digest: wCA3MPyacV3VKrU6nzpBHdBs+0s=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$4.class
+SHA1-Digest: +pFgJgbtHrL5I4sS3CIe9InZPnE=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$2.class
+SHA1-Digest: 3RPa9EyxvN3oBIt/3g2banmTGrY=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuItemRenderer$4.cla
+ ss
+SHA1-Digest: mgLfUh1RwPd26eW/BQb5WIsUyu0=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolBarManagerRenderer
+ $5.class
+SHA1-Digest: Wxv+R2pBfILxUpN8PISX6HE7Ou8=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SashRenderer.class
+SHA1-Digest: wskXdP8Jxq6yb9q6tWv3DmuVyjA=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuManagerRenderer$1.
+ class
+SHA1-Digest: O9zNAJT/VHYHqdiuliMP4fWk4Dw=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$8.class
+SHA1-Digest: YoLlqXn1BY+eThRJEhXtSAJ/CmQ=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$6.class
+SHA1-Digest: Ae6mfbY6BHKSrzoUiPAF9zxVzF0=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuItemRenderer$Visib
+ leRAT.class
+SHA1-Digest: eDCMY6UmTwN24GRIrufhw1Me89Q=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuManagerRenderer$5.
+ class
+SHA1-Digest: ElHW5tlGb4N4SJ3UIXVgKJMT1Bw=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolItemRenderer$7$1.c
+ lass
+SHA1-Digest: TNXkB28yYEhE/LGF1OZmY5dERHc=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SWTPartRenderer.class
+SHA1-Digest: ZjSepCfqyYppQD7Ve/spz76hQeo=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/RenderedToolBarRendere
+ r.class
+SHA1-Digest: oTdTOxdxdEn5MB+v3dWaoEB8YEE=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolBarRenderer$1.clas
+ s
+SHA1-Digest: OCFkyDPOOGm7rFxrCL+lNvS+Nb8=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/DirectContributionItem
+ $3.class
+SHA1-Digest: 2eoYYN5DdX8TduGAmTqyvEv8P4k=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/TrimmedPartLayout$2.cl
+ ass
+SHA1-Digest: wPhDk+uW0G7lZZotySmYiqZnVVs=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/AbstractTable
+ InformationControl$4.class
+SHA1-Digest: ZaA0gHV9w0fDBb51o45Vl5p/GmQ=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/LazyStackRenderer.clas
+ s
+SHA1-Digest: IbUxxhg9LRY9wDQspXhz2fl/RYQ=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuManagerServiceFilt
+ er.class
+SHA1-Digest: ttRkHAOOPrC4vWQUQWLtuA3ASzI=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/RenderedToolBarRendere
+ r$3.class
+SHA1-Digest: KQhnOsqTAA9YoBaYV5aCiwOag5c=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ContributedPartRendere
+ r$2.class
+SHA1-Digest: EWC4AgKd+nhJhXF4JXG/rr6vbkE=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/HandledMenuItemRendere
+ r$1.class
+SHA1-Digest: ieUOMDyncQ2GMpsaTCFnekcrtyM=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolControlContributio
+ n$1.class
+SHA1-Digest: /qGCiujmZA7Dh/zhnSuPjn4jKE8=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/AbstractTable
+ InformationControl$4$1.class
+SHA1-Digest: kSXrshgfxaP4bhPPy+6ooEnZCnY=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/LazyStackRenderer$1.cl
+ ass
+SHA1-Digest: mUEWlKvV20tfEpwB4VbW3J8b1Rw=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuManagerServiceFilt
+ er$1.class
+SHA1-Digest: Y1y5dxSP/7+hHnR1Uie3vuiyZ2I=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer.class
+SHA1-Digest: +2bZriDohBvSCZn+V4H5yDEY/aA=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/HandledContributionIte
+ m$4.class
+SHA1-Digest: 0fMCoDQ0bZ1JX+ZRmm5KhDiPR1Y=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/IUpdateServic
+ e.class
+SHA1-Digest: qkyKUIPBX/M+BX3u2eE7+tJB+sI=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$13.class
+SHA1-Digest: xEDUCiJXBPLOBOi35CciSf/GCYU=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolItemRenderer$2.cla
+ ss
+SHA1-Digest: +KtX1Y3trngI2E8Vw95DixQ+fdc=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/messages.prop
+ erties
+SHA1-Digest: ktK4jrUEpcMucVFpuQQR5CRbNYM=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SashLayout$4.class
+SHA1-Digest: jMQ6+nt1TyTxOUDWCOBSTIKbhWA=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$17.class
+SHA1-Digest: Bl80gegjFnReN3+NT/Xsqn0lHu4=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolItemRenderer$6.cla
+ ss
+SHA1-Digest: s55zNAmbNTVF7K+H00vU7EiR7t4=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$1.class
+SHA1-Digest: obDyPuYGaaH60xdD2XtzY+Zn4rQ=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ContributionRecord.cla
+ ss
+SHA1-Digest: 96vuBTfW8C4y/dPHSOB6XUc7mXE=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuItemRenderer$1.cla
+ ss
+SHA1-Digest: aPKSiFXofFiiwD3rALm3Ryx2oLg=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuRenderer.class
+SHA1-Digest: IQgwaq3Hxdca38vvAPUXSsa4hSs=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolBarManagerRenderer
+ $2.class
+SHA1-Digest: syG6Oyzsr61gKKeMSzG64+QoOUo=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolBarContributionRec
+ ord.class
+SHA1-Digest: Bn+vAjCZa8no/nIMomcu+7JtOjY=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$5.class
+SHA1-Digest: eQQMDFWfK0WMbsXCmUQQ0t7gIVM=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$3.class
+SHA1-Digest: Ws8OszBOoZxrnElmIxSZ5Uagmn4=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolBarManagerRenderer
+ $6.class
+SHA1-Digest: CHSxs7b1mSgw0kzGer9uZ61D5Ag=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$12$1.cla
+ ss
+SHA1-Digest: sQIOm4J+cte0vCosJ+44LA+mNa4=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuManagerRenderer$2.
+ class
+SHA1-Digest: 0xS2GaN+KSccritcJyk+m4PwhU0=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$9.class
+SHA1-Digest: Ykz0rUvcxHDmQosTV0ydo1S6/ZI=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/TrimBarRenderer$1.clas
+ s
+SHA1-Digest: oLHD6SzTvGHhyCqDJgJpDX/QfHo=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$7.class
+SHA1-Digest: a5VVlQ1TpLjDJH3wcZN9agTphcM=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$SaveablePa
+ rtPromptDialog.class
+SHA1-Digest: M16w3eAFNV5tYu9DZ+s+Gbzirnw=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/DirectMenuItemRenderer
+ $1.class
+SHA1-Digest: emyU/d11PWSFvRiKXfiTSQ+Ss7E=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuManagerRenderer$6.
+ class
+SHA1-Digest: dwcsi88LFFEzJg+cP40pkdsKOpI=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/AbstractTable
+ InformationControl.class
+SHA1-Digest: aJaaM8CdXplAXq9hcXwWfKr4h5I=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/CTabRendering$1.class
+SHA1-Digest: 5uVoGQS9CpI/ho1Z2MS9RgiPqZA=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/BasicPartList
+ .class
+SHA1-Digest: /1MnSjodlw8BI6c3Z5XoYLcfmss=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuManagerRendererFil
+ ter.class
+SHA1-Digest: orH/IujzqYgEdEyqNWPgGFse5ps=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/RenderedMenuItemRender
+ er$MenuRecord.class
+SHA1-Digest: PMJ3b16qgp+0pXZUcSBvvYWCaGA=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SashRenderer$1.class
+SHA1-Digest: j/yNolSCG+tBrRXOror0U7YD43M=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolBarRenderer$2.clas
+ s
+SHA1-Digest: xRZAL7jzZwMXn7HHJ04UqkUYGp8=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolBarManagerRenderer
+ $6$1.class
+SHA1-Digest: D4DA0xNX1/zY408epJMvIApa4+I=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ContributedPartRendere
+ r.class
+SHA1-Digest: 3fhw+jXUAg68rXRmtQv48jMX3v4=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$WindowSize
+ UpdateJob.class
+SHA1-Digest: 9o5Z0fhEVsRTW2kVlE/hxh0uSkQ=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$SaveablePa
+ rtPromptDialog$1.class
+SHA1-Digest: PbBOObZ+PcUs14Eyr8YFnt1ikc0=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SWTPartRenderer$1.clas
+ s
+SHA1-Digest: mYhblrgOLV1SxSs/WXuxpPnZug4=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/AbstractTable
+ InformationControl$1.class
+SHA1-Digest: jJX1BA+Seg6oCkb2M6guvSNqGVg=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/TrimmedPartLayout$3.cl
+ ass
+SHA1-Digest: PxdlifVaQFBH3Kjr+No/x6qFCnU=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/AbstractTable
+ InformationControl$5.class
+SHA1-Digest: G70oJ/8pbFkhsgHH8zYxlN9Yzdg=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ContributedPartRendere
+ r$3.class
+SHA1-Digest: +BQ+vlGbovQGjiaOFDoYb/btCqc=
+
+Name: about.html
+SHA1-Digest: +KDQabAA/C3O/NP2n7v/WkoTZVo=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/HandledContributionIte
+ m.class
+SHA1-Digest: d30C6FAlaSaUeODsXXo336j04eI=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/AbstractTable
+ InformationControl$NamePatternFilter.class
+SHA1-Digest: 6sfTJGQMRlH8RjvfsZVN46j85/A=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuManagerServiceFilt
+ er$2.class
+SHA1-Digest: sKJs5Fg/VVK4dsc37xQPKXh1FVA=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/HandledContributionIte
+ m$RunnableRunner.class
+SHA1-Digest: bjU+G04klBkUGZFTBLDpWDxGFqk=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$10.class
+SHA1-Digest: 9C0l2wiMMiuAkvbXIKebL3FOaYs=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/HandledContributionIte
+ m$1.class
+SHA1-Digest: T1cHaE9y5gkw4XbxfEa/SLptmcA=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolBarManagerRenderer
+ .class
+SHA1-Digest: hNf2DaezYJcnSkut/Sff7f+GgjI=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$10.class
+SHA1-Digest: gGpJNbF18ETQAaU9QIws897mdNU=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/HandledContributionIte
+ m$5.class
+SHA1-Digest: 5KDFoU9GjaEmmjaDkmdsArWV/BU=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuManagerRenderer.cl
+ ass
+SHA1-Digest: Yp/+NbYPTsYqFTViPKypd9VlyyI=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/BasicPartList
+ $BasicStackListLabelProvider.class
+SHA1-Digest: pKhggpb5duNWSYP59l3DDjjqykA=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SashLayout$1.class
+SHA1-Digest: qQy7dVZsTjRu8utQUtldMcuKB4Q=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/TrimBarRenderer.class
+SHA1-Digest: lxNDExwlBkbth+uV/HyFOXDfxvY=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$14.class
+SHA1-Digest: oQit3J0sTxjHGZi7QLkHmg+Wjww=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolItemRenderer$3.cla
+ ss
+SHA1-Digest: U80C6qOMdVLKYTT9Efs/8eMb7us=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$18.class
+SHA1-Digest: 0h+WFzsfO7QVYIYr9k8vUWLLGdg=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolItemRenderer$7.cla
+ ss
+SHA1-Digest: /uPfn7KdBWPXgkqIbGtpbeS7Crg=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$2.class
+SHA1-Digest: Ap4jfiABvRGsMRcrJtEkRfzwAt8=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuItemRenderer$2.cla
+ ss
+SHA1-Digest: jZXDuzmYpj4AcRx53XsgGCbMzww=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolBarManagerRenderer
+ $3.class
+SHA1-Digest: yJEdVXfHrsvbAydRTue1C9k/cS8=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$6.class
+SHA1-Digest: sCA6jkmW9o8OaHbsMS1FFjtXlyU=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$4.class
+SHA1-Digest: 02XbDOiY6RlnzWUh2MIDW01/4ZM=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WorkbenchRendererFacto
+ ry.class
+SHA1-Digest: iKv6XWHiCoQdS/aVo8jNsOa2dcg=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolBarManagerRenderer
+ $7.class
+SHA1-Digest: aINSpEd9BvrdGeGhe/GKhms7GSo=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuManagerRenderer$3.
+ class
+SHA1-Digest: dx5AbBOU+OuGK4uvkXUCYmTXpkI=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/TrimBarRenderer$2.clas
+ s
+SHA1-Digest: PTNo8N3zEzv2TrDMoHmnZQOp2q4=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$8.class
+SHA1-Digest: J9CY8fDfZbWwuRrunuxjHcYSg3A=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuRenderer$1.class
+SHA1-Digest: mq3AlxGqnXY80wLZ22KKcxSPKH8=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolControlRenderer.cl
+ ass
+SHA1-Digest: QH97S9UZioV6+Kzzjk39KOcqNMI=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ElementReferenceRender
+ er.class
+SHA1-Digest: GZhU/L8QnQuk3J0PSFWTzak47WI=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/HandledContributionIte
+ m$ToolItemUpdateTimer.class
+SHA1-Digest: Ja5RK2YnFCr1S65zpFfvV/v4Wjg=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SashRenderer$2.class
+SHA1-Digest: jWZfymnk09oFdRGIAiSANTYsueI=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/HandledMenuItemRendere
+ r.class
+SHA1-Digest: L9RII3kPMH64qaVODhpXeMwZZ1Y=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/DirectContributionItem
+ $1.class
+SHA1-Digest: xyjOgTgU+lPCdRFPf1/QHEbZroA=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/LayoutModifierToolCont
+ rol$1.class
+SHA1-Digest: U466Ec+sspkyzgqXv4lbxpeqa/g=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SWTPartRenderer$2.clas
+ s
+SHA1-Digest: alRB8DloGP5w5XYQmXXPomi792A=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolControlContributio
+ n.class
+SHA1-Digest: KKP5LswalF5PeVwNV8ONOJi4og0=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/AbstractTable
+ InformationControl$2.class
+SHA1-Digest: z45zf+n6nOG5uACHE5Ebz78z534=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/RenderedToolBarRendere
+ r$1.class
+SHA1-Digest: Ul0BR6Hl2tkJR1JvUVTBL0npF3U=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/TrimmedPartLayout$4.cl
+ ass
+SHA1-Digest: YVG9xQ3IOmRGG1sgWIkyNqJNj4E=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/AbstractTable
+ InformationControl$6.class
+SHA1-Digest: +pGmk80xt0uESGjVivemsAI7vlE=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/TrimBarRenderer$Layout
+ Job.class
+SHA1-Digest: 9zaKYGg/n0gHartcAA5YNasBbcg=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolItemRenderer.class
+SHA1-Digest: bOIdFyo7HLEQZbG7esRJqXuDteY=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$11.class
+SHA1-Digest: HhL+bPnCCW6x8vuwlzGMhz72tI0=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/HandledContributionIte
+ m$2.class
+SHA1-Digest: mcRYefWtpJL3wzCLuWiVcjTNrVk=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuItemRenderer.class
+SHA1-Digest: Ouf44BFG/nJ1+vOcOT7rgSSZuQA=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$Activati
+ onJob.class
+SHA1-Digest: eNAdC6Kn8fx0kJKIOgDhlUJDJxQ=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer.class
+SHA1-Digest: utiue5Qhgd7rLPgnW0VrDyF6igU=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$11.class
+SHA1-Digest: lKpj/mvg2kz7NZl70Pgtzv9z48Y=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SashLayout$2.class
+SHA1-Digest: tq3uoMwIOsTBLiJbJ2Sv1silCsA=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$15.class
+SHA1-Digest: nYLQnGiBHXIIlv2iALAP5exNOm4=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/AreaRenderer$1.class
+SHA1-Digest: DzRTXDHJN+bx/Fk8ufJjP6fC4Is=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolItemRenderer$4.cla
+ ss
+SHA1-Digest: 6Rn6P3UJ4Yza6PBrU/OP1WLH+dE=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolItemRenderer$8.cla
+ ss
+SHA1-Digest: b7sg2pQuQdyRJgyIy/a7tEU4tf0=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$3.class
+SHA1-Digest: PtV5ZLEOz3Qv6Exr/yniqH73QPw=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$1.class
+SHA1-Digest: 6qy3LV64HBsMSEQUOFw3TABlQVs=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/TrimUtil.class
+SHA1-Digest: rf4LhVbkgJLEwjg8fvpSG1N7NU4=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuItemRenderer$3.cla
+ ss
+SHA1-Digest: I7qBzChVOtmB4D4JgB//ddmlhik=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolBarManagerRenderer
+ $4.class
+SHA1-Digest: pMxf/VFcu3HLowVvwK1ryI4h4dk=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ToolBarRenderer.class
+SHA1-Digest: mHVdTG3Vct6MdQ/3F3OM8EqhaMQ=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/StackRenderer$7.class
+SHA1-Digest: zZLkCNotv732EPSt3icxiZArhyE=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$5.class
+SHA1-Digest: +9D/fYw2uBLMd3vlFhNP6xvJ2H4=
+
+Name: plugin.properties
+SHA1-Digest: 3E8WmmgkYvsQWDuoLhUj4H7/IlM=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuManagerRenderer$4.
+ class
+SHA1-Digest: f1WS1IZuOQrSEfqYnxhjIDF+7l0=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/RenderedMenuItemRender
+ er.class
+SHA1-Digest: PFMzlwVXXKKiQKiLzDECXtpv9P8=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$9.class
+SHA1-Digest: isoAMr0+mZESGxZs59qNz7a6RrE=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/DirectContributionItem
+ .class
+SHA1-Digest: s4PBBQhNRjXcMNijd5pEOcmfH2E=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/LayoutModifierToolCont
+ rol.class
+SHA1-Digest: fK5F7bIr5kuvzXLh3I/WqPhvqFw=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/TrimmedPartLayout.clas
+ s
+SHA1-Digest: kWtc5NsWhoBoG3JVs4CMlMbYcP4=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/PerspectiveStackRender
+ er.class
+SHA1-Digest: ejkMBA3yPROX/aTNJ2SoZ2fry8I=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SeparatorRenderer.clas
+ s
+SHA1-Digest: YfCDg2WjUOT2MG4cpfPiBtvyQiA=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuRenderer$2.class
+SHA1-Digest: 2V/hB7SLpum1G/2tVGZvtbDKTY0=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuManagerRendererFil
+ ter$SafeWrapper.class
+SHA1-Digest: UoB3ghvOOt8lVmNBGdvkQvJRbEs=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SashRenderer$3.class
+SHA1-Digest: rSDi8DVfkC3DfRlOCqn1KyLio1I=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/RenderedMenuRenderer.c
+ lass
+SHA1-Digest: o6art+PrGD5KNEMbFt/A+VxfXxM=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/DirectContributionItem
+ $2.class
+SHA1-Digest: neSTMH/pp3f81dv1ivJ/lXD7VcI=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/TrimmedPartLayout$1.cl
+ ass
+SHA1-Digest: iSyJp7IsdXQyRQFPTqrk0cAJ76c=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SWTPartRenderer$3.clas
+ s
+SHA1-Digest: u91s44aJgoo3JqIedcoFND4So2Y=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/AbstractTable
+ InformationControl$3.class
+SHA1-Digest: FWHCIqNbInpctH93lb3dlAcik+4=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/BasicPartList
+ $1.class
+SHA1-Digest: ePU+Vi2Wcgaji+b5sB6uxa1qEmo=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/MenuManagerRendererFil
+ ter$1.class
+SHA1-Digest: cqv8BUK+rBgSRUesanzCcuuyT3A=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/RenderedToolBarRendere
+ r$2.class
+SHA1-Digest: FedAVAzJoM4w76YzxpYNpSAPgpQ=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/ContributedPartRendere
+ r$1.class
+SHA1-Digest: DnEI1NkQW0gqqzbiLWCZbTxPj2I=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/AbstractTable
+ InformationControl$7.class
+SHA1-Digest: GSpID4Nj+gLV/+DtrmvEBmrS5ho=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/TrimBarLayout.class
+SHA1-Digest: gXSac8j9NLyrMumWzKAVbteTkWY=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SashLayout$SashRect.cl
+ ass
+SHA1-Digest: 2x38RUTtdxovPkjPNEV34ndW37Y=
+
+Name: org/eclipse/e4/ui/internal/workbench/renderers/swt/SWTRenderersA
+ ctivator.class
+SHA1-Digest: WbJ7PtiSnbHdhkpSQX1cOF0IjEg=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/PerspectiveRenderer.cl
+ ass
+SHA1-Digest: fSQPA759twDu98wRKaCawd/ojYE=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/SashLayout.class
+SHA1-Digest: 2alJF4pVH0ht9+Zw7l13OYdZHaw=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/AreaRenderer.class
+SHA1-Digest: mHjbIbzgoUhjEDBoUk6c1zvHkuM=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/CompositeRenderer.clas
+ s
+SHA1-Digest: UtlzPNtxasAzfN7HRs0BOvtfYJs=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/WBWRenderer$12.class
+SHA1-Digest: 5fmdoUIPofCteYPc4fNAsZc1tAg=
+
+Name: org/eclipse/e4/ui/workbench/renderers/swt/HandledContributionIte
+ m$3.class
+SHA1-Digest: kjP6IMfMVx6vrYwP0F5F5d3bjfQ=
+
