@@ -55,80 +55,84 @@ public class SashLayout extends Layout {
 		this.root = root;
 		this.host = host;
 
-		host.addMouseTrackListener(new MouseTrackListener() {
-			public void mouseHover(MouseEvent e) {
-			}
+// RAP: mouse track listener not supported
+//		host.addMouseTrackListener(new MouseTrackListener() {
+//			public void mouseHover(MouseEvent e) {
+//			}
+//
+//			public void mouseExit(MouseEvent e) {
+//				host.setCursor(null);
+//			}
+//
+//			public void mouseEnter(MouseEvent e) {
+//			}
+//		});
 
-			public void mouseExit(MouseEvent e) {
-				host.setCursor(null);
-			}
+// RAP: mouse move listener not supported
+//		host.addMouseMoveListener(new MouseMoveListener() {
+//			public void mouseMove(MouseEvent e) {
+//				if (!draggingSashes) {
+//					// Set the cursor feedback
+//					List<SashRect> sashList = getSashRects(e.x, e.y);
+//					if (sashList.size() == 0) {
+//						host.setCursor(host.getDisplay().getSystemCursor(
+//								SWT.CURSOR_ARROW));
+//					} else if (sashList.size() == 1) {
+//						if (sashList.get(0).container.isHorizontal())
+//							host.setCursor(host.getDisplay().getSystemCursor(
+//									SWT.CURSOR_SIZEWE));
+//						else
+//							host.setCursor(host.getDisplay().getSystemCursor(
+//									SWT.CURSOR_SIZENS));
+//					} else {
+//						host.setCursor(host.getDisplay().getSystemCursor(
+//								SWT.CURSOR_SIZEALL));
+//					}
+//				} else {
+//					adjustWeights(sashesToDrag, e.x, e.y);
+//					host.layout();
+//					host.update();
+//				}
+//			}
+//		});
 
-			public void mouseEnter(MouseEvent e) {
-			}
-		});
+// RAP: setCapture not supported
+//		host.addMouseListener(new MouseListener() {
+//			public void mouseUp(MouseEvent e) {
+//				host.setCapture(false);
+//				draggingSashes = false;
+//			}
+//
+//			public void mouseDown(MouseEvent e) {
+//				if (e.button != 1)
+//					return;
+//
+//				sashesToDrag = getSashRects(e.x, e.y);
+//				if (sashesToDrag.size() > 0) {
+//					draggingSashes = true;
+//					host.setCapture(true);
+//				}
+//			}
+//
+//			public void mouseDoubleClick(MouseEvent e) {
+//			}
+//		});
 
-		host.addMouseMoveListener(new MouseMoveListener() {
-			public void mouseMove(MouseEvent e) {
-				if (!draggingSashes) {
-					// Set the cursor feedback
-					List<SashRect> sashList = getSashRects(e.x, e.y);
-					if (sashList.size() == 0) {
-						host.setCursor(host.getDisplay().getSystemCursor(
-								SWT.CURSOR_ARROW));
-					} else if (sashList.size() == 1) {
-						if (sashList.get(0).container.isHorizontal())
-							host.setCursor(host.getDisplay().getSystemCursor(
-									SWT.CURSOR_SIZEWE));
-						else
-							host.setCursor(host.getDisplay().getSystemCursor(
-									SWT.CURSOR_SIZENS));
-					} else {
-						host.setCursor(host.getDisplay().getSystemCursor(
-								SWT.CURSOR_SIZEALL));
-					}
-				} else {
-					adjustWeights(sashesToDrag, e.x, e.y);
-					host.layout();
-					host.update();
-				}
-			}
-		});
-
-		host.addMouseListener(new MouseListener() {
-			public void mouseUp(MouseEvent e) {
-				host.setCapture(false);
-				draggingSashes = false;
-			}
-
-			public void mouseDown(MouseEvent e) {
-				if (e.button != 1)
-					return;
-
-				sashesToDrag = getSashRects(e.x, e.y);
-				if (sashesToDrag.size() > 0) {
-					draggingSashes = true;
-					host.setCapture(true);
-				}
-			}
-
-			public void mouseDoubleClick(MouseEvent e) {
-			}
-		});
-
-		host.addPaintListener(new PaintListener() {
-			public void paintControl(PaintEvent e) {
-				// for (SashRect sr : sashes) {
-				// Color color;
-				// if (sr.container.isHorizontal())
-				// color = e.display.getSystemColor(SWT.COLOR_MAGENTA);
-				// else
-				// color = e.display.getSystemColor(SWT.COLOR_CYAN);
-				// e.gc.setForeground(color);
-				// e.gc.setBackground(color);
-				// e.gc.fillRectangle(sr.rect);
-				// }
-			}
-		});
+// RAP: Paintlistener only supported on Canvas
+//		host.addPaintListener(new PaintListener() {
+//			public void paintControl(PaintEvent e) {
+//				// for (SashRect sr : sashes) {
+//				// Color color;
+//				// if (sr.container.isHorizontal())
+//				// color = e.display.getSystemColor(SWT.COLOR_MAGENTA);
+//				// else
+//				// color = e.display.getSystemColor(SWT.COLOR_CYAN);
+//				// e.gc.setForeground(color);
+//				// e.gc.setBackground(color);
+//				// e.gc.fillRectangle(sr.rect);
+//				// }
+//			}
+//		});
 	}
 
 	public void setRootElemenr(MUIElement newRoot) {

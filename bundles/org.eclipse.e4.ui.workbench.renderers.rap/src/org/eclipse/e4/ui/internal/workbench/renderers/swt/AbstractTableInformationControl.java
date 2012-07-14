@@ -183,53 +183,54 @@ public abstract class AbstractTableInformationControl {
 		 */
 		final int ignoreEventCount = Util.isGtk() ? 4 : 1;
 
-		table.addMouseMoveListener(new MouseMoveListener() {
-			TableItem fLastItem = null;
-			int lastY = 0;
-			int itemHeightdiv4 = table.getItemHeight() / 4;
-			int tableHeight = table.getBounds().height;
-			Point tableLoc = table.toDisplay(0, 0);
-			int divCount = 0;
-
-			public void mouseMove(MouseEvent e) {
-				if (divCount == ignoreEventCount) {
-					divCount = 0;
-				}
-				if (table.equals(e.getSource())
-						& ++divCount == ignoreEventCount) {
-					Object o = table.getItem(new Point(e.x, e.y));
-					if (fLastItem == null ^ o == null) {
-						table.setCursor(o == null ? null : table.getDisplay()
-								.getSystemCursor(SWT.CURSOR_HAND));
-					}
-					if (o instanceof TableItem && lastY != e.y) {
-						lastY = e.y;
-						if (!o.equals(fLastItem)) {
-							fLastItem = (TableItem) o;
-							table.setSelection(new TableItem[] { fLastItem });
-						} else if (e.y < itemHeightdiv4) {
-							// Scroll up
-							Item item = fTableViewer.scrollUp(e.x + tableLoc.x,
-									e.y + tableLoc.y);
-							if (item instanceof TableItem) {
-								fLastItem = (TableItem) item;
-								table.setSelection(new TableItem[] { fLastItem });
-							}
-						} else if (e.y > tableHeight - itemHeightdiv4) {
-							// Scroll down
-							Item item = fTableViewer.scrollDown(e.x
-									+ tableLoc.x, e.y + tableLoc.y);
-							if (item instanceof TableItem) {
-								fLastItem = (TableItem) item;
-								table.setSelection(new TableItem[] { fLastItem });
-							}
-						}
-					} else if (o == null) {
-						fLastItem = null;
-					}
-				}
-			}
-		});
+// RAP: mouse move listener not supported
+//		table.addMouseMoveListener(new MouseMoveListener() {
+//			TableItem fLastItem = null;
+//			int lastY = 0;
+//			int itemHeightdiv4 = table.getItemHeight() / 4;
+//			int tableHeight = table.getBounds().height;
+//			Point tableLoc = table.toDisplay(0, 0);
+//			int divCount = 0;
+//
+//			public void mouseMove(MouseEvent e) {
+//				if (divCount == ignoreEventCount) {
+//					divCount = 0;
+//				}
+//				if (table.equals(e.getSource())
+//						& ++divCount == ignoreEventCount) {
+//					Object o = table.getItem(new Point(e.x, e.y));
+//					if (fLastItem == null ^ o == null) {
+//						table.setCursor(o == null ? null : table.getDisplay()
+//								.getSystemCursor(SWT.CURSOR_HAND));
+//					}
+//					if (o instanceof TableItem && lastY != e.y) {
+//						lastY = e.y;
+//						if (!o.equals(fLastItem)) {
+//							fLastItem = (TableItem) o;
+//							table.setSelection(new TableItem[] { fLastItem });
+//						} else if (e.y < itemHeightdiv4) {
+//							// Scroll up
+//							Item item = fTableViewer.scrollUp(e.x + tableLoc.x,
+//									e.y + tableLoc.y);
+//							if (item instanceof TableItem) {
+//								fLastItem = (TableItem) item;
+//								table.setSelection(new TableItem[] { fLastItem });
+//							}
+//						} else if (e.y > tableHeight - itemHeightdiv4) {
+//							// Scroll down
+//							Item item = fTableViewer.scrollDown(e.x
+//									+ tableLoc.x, e.y + tableLoc.y);
+//							if (item instanceof TableItem) {
+//								fLastItem = (TableItem) item;
+//								table.setSelection(new TableItem[] { fLastItem });
+//							}
+//						}
+//					} else if (o == null) {
+//						fLastItem = null;
+//					}
+//				}
+//			}
+//		});
 
 		table.addMouseListener(new MouseAdapter() {
 			public void mouseUp(MouseEvent e) {
@@ -265,41 +266,42 @@ public abstract class AbstractTableInformationControl {
 			}
 		});
 
-		fShell.addTraverseListener(new TraverseListener() {
-			public void keyTraversed(TraverseEvent e) {
-				switch (e.detail) {
-				case SWT.TRAVERSE_PAGE_NEXT:
-					e.detail = SWT.TRAVERSE_NONE;
-					e.doit = true;
-					{
-						int n = table.getItemCount();
-						if (n == 0)
-							return;
-
-						int i = table.getSelectionIndex() + 1;
-						if (i >= n)
-							i = 0;
-						table.setSelection(i);
-					}
-					break;
-
-				case SWT.TRAVERSE_PAGE_PREVIOUS:
-					e.detail = SWT.TRAVERSE_NONE;
-					e.doit = true;
-					{
-						int n = table.getItemCount();
-						if (n == 0)
-							return;
-
-						int i = table.getSelectionIndex() - 1;
-						if (i < 0)
-							i = n - 1;
-						table.setSelection(i);
-					}
-					break;
-				}
-			}
-		});
+// RAP: TRAVERSE_PAGE_NEXT not supported
+//		fShell.addTraverseListener(new TraverseListener() {
+//			public void keyTraversed(TraverseEvent e) {
+//				switch (e.detail) {
+//				case SWT.TRAVERSE_PAGE_NEXT:
+//					e.detail = SWT.TRAVERSE_NONE;
+//					e.doit = true;
+//					{
+//						int n = table.getItemCount();
+//						if (n == 0)
+//							return;
+//
+//						int i = table.getSelectionIndex() + 1;
+//						if (i >= n)
+//							i = 0;
+//						table.setSelection(i);
+//					}
+//					break;
+//
+//				case SWT.TRAVERSE_PAGE_PREVIOUS:
+//					e.detail = SWT.TRAVERSE_NONE;
+//					e.doit = true;
+//					{
+//						int n = table.getItemCount();
+//						if (n == 0)
+//							return;
+//
+//						int i = table.getSelectionIndex() - 1;
+//						if (i < 0)
+//							i = n - 1;
+//						table.setSelection(i);
+//					}
+//					break;
+//				}
+//			}
+//		});
 
 		setInfoSystemColor();
 		installFilter();
@@ -373,8 +375,10 @@ public abstract class AbstractTableInformationControl {
 		});
 
 		// Horizontal separator line
-		Label separator = new Label(parent, SWT.SEPARATOR | SWT.HORIZONTAL
-				| SWT.LINE_DOT);
+//		RAP: LINE_DOT not supported (supported in SWT?)
+//		Label separator = new Label(parent, SWT.SEPARATOR | SWT.HORIZONTAL
+//				| SWT.LINE_DOT);
+		Label separator = new Label(parent, SWT.SEPARATOR | SWT.HORIZONTAL);
 		separator.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
 
 		return fFilterText;

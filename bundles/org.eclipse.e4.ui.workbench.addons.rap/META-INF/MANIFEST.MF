@@ -15,8 +15,8 @@ Require-Bundle: org.eclipse.e4.ui.model.workbench;bundle-version="0.9.1",
  org.eclipse.e4.ui.widgets;bundle-version="0.11.0",
  org.eclipse.e4.ui.css.swt;bundle-version="0.9.1",
  org.eclipse.e4.ui.css.core;bundle-version="0.9.0",
- org.eclipse.swt;bundle-version="[3.7.0,4.0.0)",
- org.eclipse.jface;bundle-version="[3.7.0,4.0.0)",
+ org.eclipse.rap.rwt;bundle-version="[1.5.0,2.0.0)",
+ org.eclipse.rap.jface;bundle-version="[1.5.0,2.0.0)",
  org.eclipse.core.runtime;bundle-version="[3.7.0,4.0.0)",
  org.eclipse.e4.ui.di;bundle-version="0.10.0"
 Export-Package: org.eclipse.e4.ui.workbench.addons.cleanupaddon,org.ec

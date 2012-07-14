@@ -950,8 +950,11 @@ public class FilteredTree extends Composite {
 					.getDescriptor(DISABLED_CLEAR_ICON).createImage();
 			final Image activeImage = JFaceResources.getImageRegistry()
 					.getDescriptor(CLEAR_ICON).createImage();
-			final Image pressedImage = new Image(getDisplay(), activeImage,
-					SWT.IMAGE_GRAY);
+// RAP unsupported image constructor
+//			final Image pressedImage = new Image(getDisplay(), activeImage,
+//					SWT.IMAGE_GRAY);
+			final Image pressedImage = JFaceResources.getImageRegistry()
+					.getDescriptor(CLEAR_ICON).createImage();
 
 			final Label clearButton = new Label(parent, SWT.NONE);
 			clearButton.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER,
@@ -979,12 +982,14 @@ public class FilteredTree extends Composite {
 							}
 						}
 					};
-					clearButton.addMouseMoveListener(fMoveListener);
+// RAP: mouse move listener not supported
+//					clearButton.addMouseMoveListener(fMoveListener);
 				}
 
 				public void mouseUp(MouseEvent e) {
 					if (fMoveListener != null) {
-						clearButton.removeMouseMoveListener(fMoveListener);
+// RAP: mouse move listener not supported
+//						clearButton.removeMouseMoveListener(fMoveListener);
 						fMoveListener = null;
 						boolean mouseInButton = isMouseInButton(e);
 						clearButton.setImage(mouseInButton ? activeImage
@@ -1002,18 +1007,19 @@ public class FilteredTree extends Composite {
 							&& e.y < buttonSize.y;
 				}
 			});
-			clearButton.addMouseTrackListener(new MouseTrackListener() {
-				public void mouseEnter(MouseEvent e) {
-					clearButton.setImage(activeImage);
-				}
-
-				public void mouseExit(MouseEvent e) {
-					clearButton.setImage(inactiveImage);
-				}
-
-				public void mouseHover(MouseEvent e) {
-				}
-			});
+// RAP: mouse track listener not supported
+//			clearButton.addMouseTrackListener(new MouseTrackListener() {
+//				public void mouseEnter(MouseEvent e) {
+//					clearButton.setImage(activeImage);
+//				}
+//
+//				public void mouseExit(MouseEvent e) {
+//					clearButton.setImage(inactiveImage);
+//				}
+//
+//				public void mouseHover(MouseEvent e) {
+//				}
+//			});
 			clearButton.addDisposeListener(new DisposeListener() {
 				public void widgetDisposed(DisposeEvent e) {
 					inactiveImage.dispose();

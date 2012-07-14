@@ -21,8 +21,10 @@ import org.eclipse.e4.ui.model.application.MApplication;
 import org.eclipse.e4.ui.model.application.descriptor.basic.MPartDescriptor;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.IDialogConstants;
+import org.eclipse.jface.dialogs.IDialogLabelKeys;
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jface.dialogs.PopupDialog;
+import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -135,10 +137,13 @@ public class ShowViewDialog extends Dialog implements
 	 *            the button bar composite
 	 */
 	protected void createButtonsForButtonBar(Composite parent) {
+// RAP: use new JFace API (multi-user)
 		okButton = createButton(parent, IDialogConstants.OK_ID,
-				IDialogConstants.OK_LABEL, true);
+				JFaceResources.getString(IDialogLabelKeys.OK_LABEL_KEY),
+				true);
 		createButton(parent, IDialogConstants.CANCEL_ID,
-				IDialogConstants.CANCEL_LABEL, false);
+				JFaceResources.getString(IDialogLabelKeys.CANCEL_LABEL_KEY),
+				false);
 		updateButtons();
 	}
 

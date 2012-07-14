@@ -38,24 +38,27 @@ public class FaderAnimationFeedback extends	AnimationFeedbackBase {
 	public void dispose() {
 		super.dispose();
 
-		if (!backingStore.isDisposed())
-			backingStore.dispose();
+// RAP: disabled animation
+//		if (!backingStore.isDisposed())
+//			backingStore.dispose();
 	}
 
 	public void initialize(AnimationEngine engine) {
 		Rectangle psRect = getBaseShell().getBounds();
 		getAnimationShell().setBounds(psRect);
 
-		// Capture the background image
-		Display display = getBaseShell().getDisplay();
-		backingStore = new Image(display, psRect);
-		GC gc = new GC(display);
-		// gc.copyArea(backingStore, psRect.x, psRect.y);
-		gc.copyArea(backingStore, psRect.x, psRect.y);
-		gc.dispose();
+// RAP: disabled animation
+//		// Capture the background image
+//		Display display = getBaseShell().getDisplay();
+//		backingStore = new Image(display, psRect);
+//		GC gc = new GC(display);
+//		// gc.copyArea(backingStore, psRect.x, psRect.y);
+//		gc.copyArea(backingStore, psRect.x, psRect.y);
+//		gc.dispose();
 		
 		getAnimationShell().setAlpha(254);
-		getAnimationShell().setBackgroundImage(backingStore);
+// RAP: disabled animation
+//		getAnimationShell().setBackgroundImage(backingStore);
 		getAnimationShell().setVisible(true);
 	}
 

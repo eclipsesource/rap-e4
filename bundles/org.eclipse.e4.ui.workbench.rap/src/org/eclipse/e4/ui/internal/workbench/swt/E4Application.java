@@ -221,7 +221,9 @@ public class E4Application implements IApplication {
 				appContext);
 		appModel.setContext(appContext);
 
-		boolean isRtl = ((Window.getDefaultOrientation() & SWT.RIGHT_TO_LEFT) != 0);
+// RAP: no RTL support
+//		boolean isRtl = ((Window.getDefaultOrientation() & SWT.RIGHT_TO_LEFT) != 0);
+		boolean isRtl = false;
 		appModel.getTransientData().put(E4Workbench.RTL_MODE, isRtl);
 
 		// for compatibility layer: set the application in the OSGi service

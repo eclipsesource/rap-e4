@@ -118,66 +118,67 @@ public class TrimPaneLayout extends Layout {
 	}
 
 	private void installResize(final Composite composite) {
-		if (resizeInstalled)
-			return;
-
-		composite.addMouseMoveListener(new MouseMoveListener() {
-			public void mouseMove(MouseEvent e) {
-				Point p = e.display.getCursorLocation();
-				if (trackState == NOT_SIZING) {
-					setCursor(composite, new Point(e.x, e.y));
-				} else if (trackState == HORIZONTAL_SIZING) {
-					dragHorizontal(composite, p);
-				} else if (trackState == VERTICAL_SIZING) {
-					dragVertical(composite, p);
-				} else if (trackState == CORNER_SIZING) {
-					dragCorner(composite, p);
-				}
-			}
-		});
-
-		composite.addMouseListener(new MouseListener() {
-
-			public void mouseUp(MouseEvent e) {
-				composite.setCapture(false);
-				trackState = NOT_SIZING;
-			}
-
-			public void mouseDown(MouseEvent e) {
-				Point p = new Point(e.x, e.y);
-				if (hSizingRect.contains(p)) {
-					curPos = e.display.getCursorLocation();
-					trackState = HORIZONTAL_SIZING;
-					composite.setCapture(true);
-				} else if (vSizingRect.contains(p)) {
-					curPos = e.display.getCursorLocation();
-					trackState = VERTICAL_SIZING;
-					composite.setCapture(true);
-				} else if (cornerRect.contains(p)) {
-					curPos = e.display.getCursorLocation();
-					trackState = CORNER_SIZING;
-					composite.setCapture(true);
-				}
-			}
-
-			public void mouseDoubleClick(MouseEvent e) {
-			}
-		});
-
-		composite.addMouseTrackListener(new MouseTrackListener() {
-			public void mouseHover(MouseEvent e) {
-			}
-
-			public void mouseExit(MouseEvent e) {
-				Composite comp = (Composite) e.widget;
-				comp.setCursor(null);
-			}
-
-			public void mouseEnter(MouseEvent e) {
-			}
-		});
-
-		resizeInstalled = true;
+// RAP: mouse move not supported
+//		if (resizeInstalled)
+//			return;
+//
+//		composite.addMouseMoveListener(new MouseMoveListener() {
+//			public void mouseMove(MouseEvent e) {
+//				Point p = e.display.getCursorLocation();
+//				if (trackState == NOT_SIZING) {
+//					setCursor(composite, new Point(e.x, e.y));
+//				} else if (trackState == HORIZONTAL_SIZING) {
+//					dragHorizontal(composite, p);
+//				} else if (trackState == VERTICAL_SIZING) {
+//					dragVertical(composite, p);
+//				} else if (trackState == CORNER_SIZING) {
+//					dragCorner(composite, p);
+//				}
+//			}
+//		});
+//
+//		composite.addMouseListener(new MouseListener() {
+//
+//			public void mouseUp(MouseEvent e) {
+//				composite.setCapture(false);
+//				trackState = NOT_SIZING;
+//			}
+//
+//			public void mouseDown(MouseEvent e) {
+//				Point p = new Point(e.x, e.y);
+//				if (hSizingRect.contains(p)) {
+//					curPos = e.display.getCursorLocation();
+//					trackState = HORIZONTAL_SIZING;
+//					composite.setCapture(true);
+//				} else if (vSizingRect.contains(p)) {
+//					curPos = e.display.getCursorLocation();
+//					trackState = VERTICAL_SIZING;
+//					composite.setCapture(true);
+//				} else if (cornerRect.contains(p)) {
+//					curPos = e.display.getCursorLocation();
+//					trackState = CORNER_SIZING;
+//					composite.setCapture(true);
+//				}
+//			}
+//
+//			public void mouseDoubleClick(MouseEvent e) {
+//			}
+//		});
+//
+//		composite.addMouseTrackListener(new MouseTrackListener() {
+//			public void mouseHover(MouseEvent e) {
+//			}
+//
+//			public void mouseExit(MouseEvent e) {
+//				Composite comp = (Composite) e.widget;
+//				comp.setCursor(null);
+//			}
+//
+//			public void mouseEnter(MouseEvent e) {
+//			}
+//		});
+//
+//		resizeInstalled = true;
 	}
 
 	/**

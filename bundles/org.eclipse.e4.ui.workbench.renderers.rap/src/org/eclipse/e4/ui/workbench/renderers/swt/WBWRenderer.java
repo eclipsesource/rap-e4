@@ -373,8 +373,10 @@ public class WBWRenderer extends SWTPartRenderer {
 		MApplication appModel = wbwModel.getContext().get(MApplication.class);
 		Boolean rtlMode = (Boolean) appModel.getTransientData().get(
 				E4Workbench.RTL_MODE);
-		int rtlStyle = (rtlMode != null && rtlMode.booleanValue()) ? SWT.RIGHT_TO_LEFT
-				: 0;
+//		RAP: No RTL support
+//		int rtlStyle = (rtlMode != null && rtlMode.booleanValue()) ? SWT.RIGHT_TO_LEFT
+//				: 0;
+		int rtlStyle = SWT.NONE;
 
 		Shell parentShell = parent == null ? null : ((Control) parent)
 				.getShell();
