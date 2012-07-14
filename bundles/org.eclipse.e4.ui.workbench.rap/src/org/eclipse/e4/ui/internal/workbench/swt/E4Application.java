@@ -92,7 +92,7 @@ import org.w3c.dom.css.CSSStyleDeclaration;
  */
 public class E4Application implements IApplication {
 
-	private static final String PLUGIN_ID = "org.eclipse.e4.ui.workbench.swt"; //$NON-NLS-1$
+	private static final String PLUGIN_ID = "org.eclipse.e4.ui.workbench.rap"; //$NON-NLS-1$
 
 	// Copied from IDEApplication
 	public static final String METADATA_FOLDER = ".metadata"; //$NON-NLS-1$
