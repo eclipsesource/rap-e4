@@ -77,7 +77,7 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Widget;
-import org.eclipse.ui.testing.TestableObject;
+//import org.eclipse.ui.testing.TestableObject;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
@@ -983,13 +983,14 @@ public class PartRenderingEngine implements IPresentationEngine {
 					}
 				}
 
-				TestableObject testableObject = (TestableObject) runContext
-						.get(TestableObject.class.getName());
-				if (testableObject instanceof E4Testable) {
-					((E4Testable) testableObject).init(display,
-							(IWorkbench) runContext.get(IWorkbench.class
-									.getName()));
-				}
+// RAP: TestableObject requires workbench 3
+//				TestableObject testableObject = (TestableObject) runContext
+//						.get(TestableObject.class.getName());
+//				if (testableObject instanceof E4Testable) {
+//					((E4Testable) testableObject).init(display,
+//							(IWorkbench) runContext.get(IWorkbench.class
+//									.getName()));
+//				}
 
 				IEventLoopAdvisor advisor = runContext.getActiveLeaf().get(
 						IEventLoopAdvisor.class);
