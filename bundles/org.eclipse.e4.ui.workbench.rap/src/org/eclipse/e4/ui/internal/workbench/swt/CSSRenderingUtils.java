@@ -15,7 +15,7 @@ import java.util.Map;
 import org.eclipse.e4.ui.css.core.engine.CSSEngine;
 import org.eclipse.e4.ui.css.swt.dom.ControlElement;
 import org.eclipse.e4.ui.css.swt.dom.WidgetElement;
-import org.eclipse.e4.ui.widgets.ImageBasedFrame;
+//import org.eclipse.e4.ui.widgets.ImageBasedFrame;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.GC;
 import org.eclipse.swt.graphics.Image;
@@ -49,12 +49,13 @@ public class CSSRenderingUtils {
 		if (vertical && handleImage != null)
 			handleImage = rotateImage(toFrame.getDisplay(), handleImage, null);
 
-		if (frameImage != null) {
-			ImageBasedFrame frame = new ImageBasedFrame(toFrame.getParent(),
-					toFrame, vertical, draggable);
-			frame.setImages(frameImage, frameInts, handleImage);
-			return frame;
-		}
+// RAP: ImagedBasedFrame not yet implemented for RAP, see bundle org.eclipse.e4.ui.widgets
+//		if (frameImage != null) {
+//			ImageBasedFrame frame = new ImageBasedFrame(toFrame.getParent(),
+//					toFrame, vertical, draggable);
+//			frame.setImages(frameImage, frameInts, handleImage);
+//			return frame;
+//		}
 
 		return toFrame;
 	}
