@@ -5,10 +5,10 @@ Bundle-SymbolicName: org.eclipse.e4.ui.bindings;singleton:=true
 Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
  rm/eclipse.platform.ui.git;path="bundles/org.eclipse.e4.ui.bindings";
  tag=v20120523-1955
-Require-Bundle: org.eclipse.swt;bundle-version="[3.6.0,4.0.0)",org.ecl
- ipse.core.commands;bundle-version="[3.5.0,4.0.0)",org.eclipse.e4.core
- .contexts;bundle-version="1.0.0",org.eclipse.e4.core.di;bundle-versio
- n="1.1.0"
+Require-Bundle: org.eclipse.core.commands;bundle-version="[3.5.0,4.0.0)",
+ org.eclipse.e4.core.contexts;bundle-version="1.0.0",
+ org.eclipse.e4.core.di;bundle-version="1.1.0",
+ org.eclipse.rap.rwt;bundle-version="[1.5.0,2.0.0)"
 Bundle-Activator: org.eclipse.e4.ui.bindings.internal.Activator
 Export-Package: org.eclipse.e4.ui.bindings; x-friends:="org.eclipse.e4
  .ui.workbench,  org.eclipse.e4.ui.workbench.renderers.swt,  org.eclip

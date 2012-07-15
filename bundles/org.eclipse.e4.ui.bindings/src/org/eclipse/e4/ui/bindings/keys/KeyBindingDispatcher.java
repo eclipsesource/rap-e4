@@ -34,7 +34,7 @@ import org.eclipse.jface.bindings.keys.ParseException;
 import org.eclipse.jface.bindings.keys.SWTKeySupport;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.browser.Browser;
-import org.eclipse.swt.custom.StyledText;
+//import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Event;
@@ -222,8 +222,8 @@ public class KeyBindingDispatcher {
 	 * 
 	 * @since 3.1
 	 */
-	private final OutOfOrderVerifyListener outOfOrderVerifyListener = new OutOfOrderVerifyListener(
-			outOfOrderListener);
+//	private final OutOfOrderVerifyListener outOfOrderVerifyListener = new OutOfOrderVerifyListener(
+//			outOfOrderListener);
 
 	/**
 	 * The mode is the current state of the key binding architecture. In the case of multi-stroke
@@ -335,19 +335,20 @@ public class KeyBindingDispatcher {
 				 */
 				return;
 
-			} else if (widget instanceof StyledText) {
-
-				if (event.type == SWT.KeyDown) {
-					/*
-					 * KLUDGE. Some people try to do useful work in verify listeners. The way verify
-					 * listeners work in SWT, we need to verify the key as well; otherwise, we can't
-					 * detect that useful work has been done.
-					 */
-					if (!outOfOrderVerifyListener.isActive(event.time)) {
-						((StyledText) widget).addVerifyKeyListener(outOfOrderVerifyListener);
-						outOfOrderVerifyListener.setActive(event.time);
-					}
-				}
+// RAP: StyledText not implemented
+//			} else if (widget instanceof StyledText) {
+//
+//				if (event.type == SWT.KeyDown) {
+//					/*
+//					 * KLUDGE. Some people try to do useful work in verify listeners. The way verify
+//					 * listeners work in SWT, we need to verify the key as well; otherwise, we can't
+//					 * detect that useful work has been done.
+//					 */
+//					if (!outOfOrderVerifyListener.isActive(event.time)) {
+//						((StyledText) widget).addVerifyKeyListener(outOfOrderVerifyListener);
+//						outOfOrderVerifyListener.setActive(event.time);
+//					}
+//				}
 
 			} else {
 				if (!outOfOrderListener.isActive(event.time)) {
