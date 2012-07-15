@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_hwGxsMzOEeG2hqUf-TXrxA" elementId="org.eclipse.e4.ide.application" bindingContexts="_hwGxsczOEeG2hqUf-TXrxA">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_hwHYxszOEeG2hqUf-TXrxA" label="example.e4.app" x="20" y="20" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_hwHYzszOEeG2hqUf-TXrxA">
+      <children xsi:type="advanced:Perspective" xmi:id="_hwHYz8zOEeG2hqUf-TXrxA">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_hwHY0MzOEeG2hqUf-TXrxA">
+          <children xsi:type="basic:PartStack" xmi:id="_hwHY0czOEeG2hqUf-TXrxA">
+            <children xsi:type="basic:Part" xmi:id="_DJMWIMz3EeGKEqV76pxwBA" elementId="example.e4.app.part.0" contributionURI="bundleclass://example.e4.app/example.e4.app.ExamplePart" label="Hello E4"/>
+            <children xsi:type="basic:Part" xmi:id="_3131gMz7EeGKEqV76pxwBA" elementId="example.e4.app.part.2" label="Part 2"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_9AIT4Mz7EeGKEqV76pxwBA" elementId="example.e4.app.partstack.0">
+            <children xsi:type="basic:Part" xmi:id="_9a49QMz7EeGKEqV76pxwBA" elementId="example.e4.app.part.3 " label="Part 3"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_hwHYx8zOEeG2hqUf-TXrxA" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_hwHYyMzOEeG2hqUf-TXrxA" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_hwHYyczOEeG2hqUf-TXrxA" label="Open" iconURI="platform:/plugin/example.e4.app/icons/sample.gif" command="_hwGxvszOEeG2hqUf-TXrxA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_hwHYyszOEeG2hqUf-TXrxA" label="Save" iconURI="platform:/plugin/example.e4.app/icons/save_edit.gif" command="_hwHYwMzOEeG2hqUf-TXrxA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_hwHYy8zOEeG2hqUf-TXrxA" label="Quit" command="_hwGxuszOEeG2hqUf-TXrxA"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_hwHYzMzOEeG2hqUf-TXrxA" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_hwHYzczOEeG2hqUf-TXrxA" label="About" command="_hwHYw8zOEeG2hqUf-TXrxA"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_hwH_0MzOEeG2hqUf-TXrxA">
+      <children xsi:type="menu:ToolBar" xmi:id="_hwH_0czOEeG2hqUf-TXrxA" elementId="toolbar:org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_hwH_0szOEeG2hqUf-TXrxA" iconURI="platform:/plugin/example.e4.app/icons/sample.gif" command="_hwGxvszOEeG2hqUf-TXrxA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_hwH_08zOEeG2hqUf-TXrxA" iconURI="platform:/plugin/example.e4.app/icons/save_edit.gif" command="_hwHYwMzOEeG2hqUf-TXrxA"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_hwGxu8zOEeG2hqUf-TXrxA" contributionURI="bundleclass://example.e4.app/example.e4.app.handlers.QuitHandler" command="_hwGxuszOEeG2hqUf-TXrxA"/>
+  <handlers xmi:id="_hwGxv8zOEeG2hqUf-TXrxA" contributionURI="bundleclass://example.e4.app/example.e4.app.handlers.OpenHandler" command="_hwGxvszOEeG2hqUf-TXrxA"/>
+  <handlers xmi:id="_hwHYwczOEeG2hqUf-TXrxA" contributionURI="bundleclass://example.e4.app/example.e4.app.handlers.SaveHandler" command="_hwHYwMzOEeG2hqUf-TXrxA"/>
+  <handlers xmi:id="_hwHYxMzOEeG2hqUf-TXrxA" contributionURI="bundleclass://example.e4.app/example.e4.app.handlers.AboutHandler" command="_hwHYw8zOEeG2hqUf-TXrxA"/>
+  <bindingTables xmi:id="_hwGxvMzOEeG2hqUf-TXrxA" bindingContext="_hwGxsczOEeG2hqUf-TXrxA">
+    <bindings xmi:id="_hwGxvczOEeG2hqUf-TXrxA" keySequence="M1+Q" command="_hwGxuszOEeG2hqUf-TXrxA"/>
+    <bindings xmi:id="_hwGxwMzOEeG2hqUf-TXrxA" keySequence="M1+O" command="_hwGxvszOEeG2hqUf-TXrxA"/>
+    <bindings xmi:id="_hwHYwszOEeG2hqUf-TXrxA" keySequence="M1+S" command="_hwHYwMzOEeG2hqUf-TXrxA"/>
+    <bindings xmi:id="_hwHYxczOEeG2hqUf-TXrxA" keySequence="M1+A" command="_hwHYw8zOEeG2hqUf-TXrxA"/>
+  </bindingTables>
+  <rootContext xmi:id="_hwGxsczOEeG2hqUf-TXrxA" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_hwGxsszOEeG2hqUf-TXrxA" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_hwGxs8zOEeG2hqUf-TXrxA" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_hwGxuszOEeG2hqUf-TXrxA" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_hwGxvszOEeG2hqUf-TXrxA" elementId="example.e4.app.open" commandName="openCommand"/>
+  <commands xmi:id="_hwHYwMzOEeG2hqUf-TXrxA" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_hwHYw8zOEeG2hqUf-TXrxA" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <addons xmi:id="_hwGxtMzOEeG2hqUf-TXrxA" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_hwGxtczOEeG2hqUf-TXrxA" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_hwGxt8zOEeG2hqUf-TXrxA" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_hwGxuMzOEeG2hqUf-TXrxA" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+</application:Application>
