@@ -12,9 +12,9 @@ package org.eclipse.e4.ui.internal.workbench.swt;
 
 import java.util.HashMap;
 import java.util.Map;
-import org.eclipse.e4.ui.css.core.engine.CSSEngine;
-import org.eclipse.e4.ui.css.swt.dom.ControlElement;
-import org.eclipse.e4.ui.css.swt.dom.WidgetElement;
+//import org.eclipse.e4.ui.css.core.engine.CSSEngine;
+//import org.eclipse.e4.ui.css.swt.dom.ControlElement;
+//import org.eclipse.e4.ui.css.swt.dom.WidgetElement;
 //import org.eclipse.e4.ui.widgets.ImageBasedFrame;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.GC;
@@ -118,27 +118,29 @@ public class CSSRenderingUtils {
 	@SuppressWarnings("restriction")
 	public CSSValue getCSSValue(Control styleControl, String className,
 			String attributeName) {
-		CSSEngine csseng = WidgetElement.getEngine(styleControl);
-		if (csseng == null) {
-			return null;
-		}
-		ControlElement tempEment = (ControlElement) csseng
-				.getElement(styleControl);
-		if (tempEment == null) {
-			return null;
-		}
-
-		// super hack
-		if (className != null)
-			WidgetElement.setCSSClass(styleControl, className);
-
-		CSSStyleDeclaration styleDeclarations = csseng.getViewCSS()
-				.getComputedStyle(tempEment, ""); //$NON-NLS-1$
-
-		if (styleDeclarations == null)
-			return null;
-
-		return styleDeclarations.getPropertyCSSValue(attributeName);
+// RAP: CSS styling for SWT not ported to RAP
+//		CSSEngine csseng = WidgetElement.getEngine(styleControl);
+//		if (csseng == null) {
+//			return null;
+//		}
+//		ControlElement tempEment = (ControlElement) csseng
+//				.getElement(styleControl);
+//		if (tempEment == null) {
+//			return null;
+//		}
+//
+//		// super hack
+//		if (className != null)
+//			WidgetElement.setCSSClass(styleControl, className);
+//
+//		CSSStyleDeclaration styleDeclarations = csseng.getViewCSS()
+//				.getComputedStyle(tempEment, ""); //$NON-NLS-1$
+//
+//		if (styleDeclarations == null)
+//			return null;
+//
+//		return styleDeclarations.getPropertyCSSValue(attributeName);
+		return null;
 	}
 
 	/**
@@ -149,62 +151,63 @@ public class CSSRenderingUtils {
 	public Image createImage(Control styleControl, String classId,
 			String attName, Integer[] frameInts) {
 		Image image = null;
-
-		CSSEngine csseng = WidgetElement.getEngine(styleControl);
-		if (csseng == null) {
-			return null;
-		}
-		ControlElement tempEment = (ControlElement) csseng
-				.getElement(styleControl);
-		if (tempEment == null) {
-			return null;
-		}
-		if (classId != null)
-			ControlElement.setCSSClass(styleControl, classId); //$NON-NLS-1$
-
-		CSSStyleDeclaration styleDeclarations = csseng.getViewCSS()
-				.getComputedStyle(tempEment, "");
-		if (styleDeclarations == null)
-			return null;
-
-		CSSValue imagePath = styleDeclarations.getPropertyCSSValue(attName); //$NON-NLS-1$
-		if (imagePath == null)
-			return null;
-
-		if (imagePath != null
-				&& imagePath.getCssValueType() == CSSValue.CSS_PRIMITIVE_VALUE) {
-			// String imageString = ((CSSPrimitiveValue) imagePath)
-			// .getStringValue();
-			// System.out.println("here" + imageString);
-			try {
-				image = (Image) csseng.convert(imagePath, Image.class,
-						styleControl.getDisplay());
-				if (image != null && frameInts != null) {
-					CSSValue value = styleDeclarations
-							.getPropertyCSSValue("frame-cuts"); //$NON-NLS-1$
-					if (value.getCssValueType() == CSSValue.CSS_VALUE_LIST) {
-						CSSValueList valueList = (CSSValueList) value;
-						if (valueList.getLength() != 4)
-							return null;
-
-						for (int i = 0; i < valueList.getLength(); i++) {
-							CSSValue val = valueList.item(i);
-							if ((val.getCssValueType() == CSSValue.CSS_PRIMITIVE_VALUE)
-									&& ((CSSPrimitiveValue) val)
-											.getPrimitiveType() == CSSPrimitiveValue.CSS_PX) {
-								frameInts[i] = (int) ((CSSPrimitiveValue) val)
-										.getFloatValue(CSSPrimitiveValue.CSS_PX);
-							} else {
-								return null;
-							}
-						}
-
-						// System.out.println("Results " + frameInts);
-					}
-				}
-			} catch (Exception e1) {
-			}
-		}
-		return image;
+// RAP: CSS styling for SWT not ported to RAP
+//		CSSEngine csseng = WidgetElement.getEngine(styleControl);
+//		if (csseng == null) {
+//			return null;
+//		}
+//		ControlElement tempEment = (ControlElement) csseng
+//				.getElement(styleControl);
+//		if (tempEment == null) {
+//			return null;
+//		}
+//		if (classId != null)
+//			ControlElement.setCSSClass(styleControl, classId); //$NON-NLS-1$
+//
+//		CSSStyleDeclaration styleDeclarations = csseng.getViewCSS()
+//				.getComputedStyle(tempEment, "");
+//		if (styleDeclarations == null)
+//			return null;
+//
+//		CSSValue imagePath = styleDeclarations.getPropertyCSSValue(attName); //$NON-NLS-1$
+//		if (imagePath == null)
+//			return null;
+//
+//		if (imagePath != null
+//				&& imagePath.getCssValueType() == CSSValue.CSS_PRIMITIVE_VALUE) {
+//			// String imageString = ((CSSPrimitiveValue) imagePath)
+//			// .getStringValue();
+//			// System.out.println("here" + imageString);
+//			try {
+//				image = (Image) csseng.convert(imagePath, Image.class,
+//						styleControl.getDisplay());
+//				if (image != null && frameInts != null) {
+//					CSSValue value = styleDeclarations
+//							.getPropertyCSSValue("frame-cuts"); //$NON-NLS-1$
+//					if (value.getCssValueType() == CSSValue.CSS_VALUE_LIST) {
+//						CSSValueList valueList = (CSSValueList) value;
+//						if (valueList.getLength() != 4)
+//							return null;
+//
+//						for (int i = 0; i < valueList.getLength(); i++) {
+//							CSSValue val = valueList.item(i);
+//							if ((val.getCssValueType() == CSSValue.CSS_PRIMITIVE_VALUE)
+//									&& ((CSSPrimitiveValue) val)
+//											.getPrimitiveType() == CSSPrimitiveValue.CSS_PX) {
+//								frameInts[i] = (int) ((CSSPrimitiveValue) val)
+//										.getFloatValue(CSSPrimitiveValue.CSS_PX);
+//							} else {
+//								return null;
+//							}
+//						}
+//
+//						// System.out.println("Results " + frameInts);
+//					}
+//				}
+//			} catch (Exception e1) {
+//			}
+//		}
+//		return image;
+		return null;
 	}
 }
