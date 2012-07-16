@@ -7,7 +7,7 @@ It's not working properly and does not even support multiple sessions.
 Getting started
 ===============
 
-* Setup an Eclipse IDE that contains the E4 SDK and the RAP Tools from Juno
+* Setup an Eclipse IDE that contains the E4 SDK, EGit and the RAP Tools from Juno
 
 * Import all projects from the `bundles/` directory
 
