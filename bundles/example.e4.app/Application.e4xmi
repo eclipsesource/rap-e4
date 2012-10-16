@@ -3,31 +3,25 @@
   <children xsi:type="basic:TrimmedWindow" xmi:id="_hwHYxszOEeG2hqUf-TXrxA" label="example.e4.app" x="20" y="20" width="500" height="400">
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_hwHYzszOEeG2hqUf-TXrxA">
       <children xsi:type="advanced:Perspective" xmi:id="_hwHYz8zOEeG2hqUf-TXrxA">
-        <children xsi:type="basic:PartSashContainer" xmi:id="_hwHY0MzOEeG2hqUf-TXrxA">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_hwHY0MzOEeG2hqUf-TXrxA" horizontal="true">
           <children xsi:type="basic:PartStack" xmi:id="_hwHY0czOEeG2hqUf-TXrxA">
-            <children xsi:type="basic:Part" xmi:id="_DJMWIMz3EeGKEqV76pxwBA" elementId="example.e4.app.part.0" contributionURI="bundleclass://example.e4.app/example.e4.app.ExamplePart" label="Hello E4"/>
-            <children xsi:type="basic:Part" xmi:id="_3131gMz7EeGKEqV76pxwBA" elementId="example.e4.app.part.2" label="Part 2"/>
+            <children xsi:type="basic:Part" xmi:id="_DJMWIMz3EeGKEqV76pxwBA" elementId="example.e4.app.part.0" contributionURI="bundleclass://example.e4.app/example.e4.app.parts.TodoOverviewPart" label="Overview2"/>
           </children>
           <children xsi:type="basic:PartStack" xmi:id="_9AIT4Mz7EeGKEqV76pxwBA" elementId="example.e4.app.partstack.0">
-            <children xsi:type="basic:Part" xmi:id="_9a49QMz7EeGKEqV76pxwBA" elementId="example.e4.app.part.3 " label="Part 3"/>
+            <children xsi:type="basic:Part" xmi:id="_9a49QMz7EeGKEqV76pxwBA" elementId="example.e4.app.part.3 " contributionURI="bundleclass://example.e4.app/example.e4.app.parts.TodoDetailsPart" label="Details"/>
           </children>
         </children>
       </children>
     </children>
-    <mainMenu xmi:id="_hwHYx8zOEeG2hqUf-TXrxA" elementId="menu:org.eclipse.ui.main.menu">
-      <children xsi:type="menu:Menu" xmi:id="_hwHYyMzOEeG2hqUf-TXrxA" label="File">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_hwHYyczOEeG2hqUf-TXrxA" label="Open" iconURI="platform:/plugin/example.e4.app/icons/sample.gif" command="_hwGxvszOEeG2hqUf-TXrxA"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_hwHYyszOEeG2hqUf-TXrxA" label="Save" iconURI="platform:/plugin/example.e4.app/icons/save_edit.gif" command="_hwHYwMzOEeG2hqUf-TXrxA"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_hwHYy8zOEeG2hqUf-TXrxA" label="Quit" command="_hwGxuszOEeG2hqUf-TXrxA"/>
-      </children>
-      <children xsi:type="menu:Menu" xmi:id="_hwHYzMzOEeG2hqUf-TXrxA" label="Help">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_hwHYzczOEeG2hqUf-TXrxA" label="About" command="_hwHYw8zOEeG2hqUf-TXrxA"/>
+    <mainMenu xmi:id="_ePj4sBSDEeKHRJ2FKd4cYg" elementId="example.e4.app.menu.0">
+      <children xsi:type="menu:Menu" xmi:id="_nWDtsBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.menu.1" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_oFdKUBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.handledmenuitem.0" label="Exit" command="_hwGxuszOEeG2hqUf-TXrxA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_vnfYYBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.handledmenuitem.1" label="Save" command="_hwHYwMzOEeG2hqUf-TXrxA"/>
       </children>
     </mainMenu>
-    <trimBars xmi:id="_hwH_0MzOEeG2hqUf-TXrxA">
-      <children xsi:type="menu:ToolBar" xmi:id="_hwH_0czOEeG2hqUf-TXrxA" elementId="toolbar:org.eclipse.ui.main.toolbar">
-        <children xsi:type="menu:HandledToolItem" xmi:id="_hwH_0szOEeG2hqUf-TXrxA" iconURI="platform:/plugin/example.e4.app/icons/sample.gif" command="_hwGxvszOEeG2hqUf-TXrxA"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_hwH_08zOEeG2hqUf-TXrxA" iconURI="platform:/plugin/example.e4.app/icons/save_edit.gif" command="_hwHYwMzOEeG2hqUf-TXrxA"/>
+    <trimBars xmi:id="_r4YpYBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.trimbar.0">
+      <children xsi:type="menu:ToolBar" xmi:id="_tELuIBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.toolbar.0">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_td_8UBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.handledtoolitem.0" label="Open" iconURI="platform:/plugin/example.e4.app/icons/save_edit.gif" command="_hwGxvszOEeG2hqUf-TXrxA"/>
       </children>
     </trimBars>
   </children>
@@ -50,7 +44,9 @@
   <commands xmi:id="_hwHYwMzOEeG2hqUf-TXrxA" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
   <commands xmi:id="_hwHYw8zOEeG2hqUf-TXrxA" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
   <addons xmi:id="_hwGxtMzOEeG2hqUf-TXrxA" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_-df1QBSCEeKHRJ2FKd4cYg" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
   <addons xmi:id="_hwGxtczOEeG2hqUf-TXrxA" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_hwGxt8zOEeG2hqUf-TXrxA" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
   <addons xmi:id="_hwGxuMzOEeG2hqUf-TXrxA" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_7sH50BSCEeKHRJ2FKd4cYg" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.rap/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
 </application:Application>
