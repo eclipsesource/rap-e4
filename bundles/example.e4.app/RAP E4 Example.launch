@@ -37,5 +37,5 @@
 <booleanAttribute key="tracing" value="false"/>
 <booleanAttribute key="useCustomFeatures" value="false"/>
 <booleanAttribute key="useDefaultConfigArea" value="true"/>
-<stringAttribute key="workspace_bundles" value="com.example.e4.bundleresourceloader@default:default,com.example.e4.rcp.todo.model@default:default,com.example.e4.rcp.todo.service@default:default,example.e4.app@default:default,org.eclipse.e4.ui.bindings@default:default,org.eclipse.e4.ui.workbench.rap@default:default,org.eclipse.e4.ui.workbench.renderers.rap@default:default"/>
+<stringAttribute key="workspace_bundles" value="com.example.e4.rcp.todo.model@default:default,com.example.e4.rcp.todo.service@default:default,example.e4.app@default:default,org.eclipse.e4.ui.bindings@default:default,org.eclipse.e4.ui.workbench.rap@default:default,org.eclipse.e4.ui.workbench.renderers.rap@default:default"/>
 </launchConfiguration>
