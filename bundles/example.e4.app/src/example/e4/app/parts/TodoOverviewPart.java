@@ -109,7 +109,7 @@ public class TodoOverviewPart {
 		viewer.setContentProvider(ArrayContentProvider.getInstance());
 		TableViewerColumn column = new TableViewerColumn(viewer, SWT.NONE);
 
-		column.getColumn().setWidth(100);
+		column.getColumn().setWidth(200);
 		column.getColumn().setText("Summary");
 		column.setLabelProvider(new ColumnLabelProvider() {
 			@Override
@@ -147,7 +147,7 @@ public class TodoOverviewPart {
 		});
 		column = new TableViewerColumn(viewer, SWT.NONE);
 
-		column.getColumn().setWidth(100);
+		column.getColumn().setWidth(300);
 		column.getColumn().setText("Description");
 		column.setLabelProvider(new ColumnLabelProvider() {
 			@Override
