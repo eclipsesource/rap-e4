@@ -40,147 +40,136 @@ import com.example.e4.rcp.todo.model.Todo;
 
 import example.e4.app.events.MyEventConstants;
 
+
 public class TodoOverviewPart {
 
-	private Button btnNewButton;
-	private Label lblNewLabel;
-	private TableViewer viewer;
+  private Button btnNewButton;
+  private TableViewer viewer;
+  @Inject
+  UISynchronize sync;
+  @Inject
+  ESelectionService service;
+  @Inject
+  ITodoModel model;
 
-	@Inject
-	UISynchronize sync;
-	@Inject
-	ESelectionService service;
-	
-	@Inject
-	ITodoModel model;
-	
-	@Inject
-	public TodoOverviewPart(Composite parent) {
-		parent.setLayout(new GridLayout(1, false));
+  @Inject
+  public TodoOverviewPart( Composite parent ) {
+    parent.setLayout( new GridLayout( 1, false ) );
+    createLoadButton( parent );
+    createSearchField( parent );
+    createViewer( parent );
+  }
 
-		btnNewButton = new Button(parent, SWT.NONE);
-		btnNewButton.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				Job job = new Job("loading") {
-					@Override
-					protected IStatus run(IProgressMonitor monitor) {
-						List<Todo> list = model.getTodos();
-						sync.asyncExec(new Runnable() {
-							@Override
-							public void run() {
-								viewer.setInput(model.getTodos());
-							}
-						});
-						return Status.OK_STATUS;
-					}
-				};
-				job.schedule();
-			
-			}
-		});
+  private void createLoadButton( Composite parent ) {
+    btnNewButton = new Button( parent, SWT.NONE );
+    btnNewButton.addSelectionListener( new SelectionAdapter() {
 
-		btnNewButton.setText("Load Data");
+      @Override
+      public void widgetSelected( SelectionEvent e ) {
+        viewer.setInput( model.getTodos() );
+      }
+    } );
+    btnNewButton.setText( "Load Data" );
+  }
 
-		Text search = new Text(parent, SWT.SEARCH | SWT.CANCEL
-				| SWT.ICON_SEARCH);
-		search.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false,
-				1, 1));
-		search.setMessage("Filter");
-		search.addSelectionListener(new SelectionAdapter() {
-			public void widgetDefaultSelected(SelectionEvent e) {
-				if (e.detail == SWT.CANCEL) {
-					Text text = (Text) e.getSource();
-					text.setText("");
-					//
-				}
-			}
-			// MORE...
-		});
+  private void createSearchField( Composite parent ) {
+    Text search = new Text( parent, SWT.SEARCH | SWT.CANCEL | SWT.ICON_SEARCH );
+    search.setLayoutData( new GridData( SWT.FILL, SWT.CENTER, false, false, 1, 1 ) );
+    search.setMessage( "Filter" );
+    search.addSelectionListener( new SelectionAdapter() {
 
-		viewer = new TableViewer(parent, SWT.MULTI | SWT.H_SCROLL
-				| SWT.V_SCROLL | SWT.FULL_SELECTION);
-		Table table = viewer.getTable();
-		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+      public void widgetDefaultSelected( SelectionEvent e ) {
+        if( e.detail == SWT.CANCEL ) {
+          Text text = ( Text )e.getSource();
+          text.setText( "" );
+          //
+        }
+      }
+      // MORE...
+    } );
+  }
 
-		table.setHeaderVisible(true);
-		table.setLinesVisible(true);
+  private void createViewer( Composite parent ) {
+    viewer = new TableViewer( parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION );
+    Table table = viewer.getTable();
+    table.setLayoutData( new GridData( SWT.FILL, SWT.FILL, true, true, 1, 1 ) );
+    table.setHeaderVisible( true );
+    table.setLinesVisible( true );
+    createSummaryColumn();
+    createDetailsColumn();
+    viewer.setContentProvider( ArrayContentProvider.getInstance() );
+    viewer.addSelectionChangedListener( new ISelectionChangedListener() {
+      @Override
+      public void selectionChanged( SelectionChangedEvent event ) {
+        IStructuredSelection selection = ( IStructuredSelection )viewer.getSelection();
+        service.setSelection( selection.getFirstElement() );
+      }
+    } );
+  }
 
-		viewer.setContentProvider(ArrayContentProvider.getInstance());
-		TableViewerColumn column = new TableViewerColumn(viewer, SWT.NONE);
+  private void createSummaryColumn() {
+    TableViewerColumn column = new TableViewerColumn( viewer, SWT.NONE );
+    column.getColumn().setWidth( 200 );
+    column.getColumn().setText( "Summary" );
+    column.setLabelProvider( new ColumnLabelProvider() {
+      @Override
+      public String getText( Object element ) {
+        Todo todo = ( Todo )element;
+        return todo.getSummary();
+      }
+    } );
+    column.setEditingSupport( new EditingSupport( viewer ) {
 
-		column.getColumn().setWidth(200);
-		column.getColumn().setText("Summary");
-		column.setLabelProvider(new ColumnLabelProvider() {
-			@Override
-			public String getText(Object element) {
-				Todo todo = (Todo) element;
-				return todo.getSummary();
-			}
+      @Override
+      protected void setValue( Object element, Object value ) {
+        Todo todo = ( Todo )element;
+        todo.setSummary( String.valueOf( value ) );
+        viewer.refresh();
+      }
 
-		});
+      @Override
+      protected Object getValue( Object element ) {
+        Todo todo = ( Todo )element;
+        return todo.getSummary();
+      }
 
-		column.setEditingSupport(new EditingSupport(viewer) {
+      @Override
+      protected CellEditor getCellEditor( Object element ) {
+        return new TextCellEditor( viewer.getTable(), SWT.NONE );
+      }
 
-			@Override
-			protected void setValue(Object element, Object value) {
-				Todo todo = (Todo) element;
-				todo.setSummary(String.valueOf(value));
-				viewer.refresh();
-			}
+      @Override
+      protected boolean canEdit( Object element ) {
+        return true;
+      }
+    } );
+  }
 
-			@Override
-			protected Object getValue(Object element) {
-				Todo todo = (Todo) element;
-				return todo.getSummary();
-			}
+  private void createDetailsColumn() {
+    TableViewerColumn column = new TableViewerColumn( viewer, SWT.NONE );
+    column.getColumn().setWidth( 300 );
+    column.getColumn().setText( "Description" );
+    column.setLabelProvider( new ColumnLabelProvider() {
+      @Override
+      public String getText( Object element ) {
+        Todo todo = ( Todo )element;
+        return todo.getDescription();
+      }
+    } );
+  }
 
-			@Override
-			protected CellEditor getCellEditor(Object element) {
-				return new TextCellEditor(viewer.getTable(), SWT.NONE);
-			}
+  @Inject
+  @Optional
+  private void getNotified( @UIEventTopic( MyEventConstants.TOPIC_TODO_DATA_UPDATE ) String topic )
+  {
+    if( viewer != null ) {
+      viewer.setInput( model.getTodos() );
+    }
+  }
 
-			@Override
-			protected boolean canEdit(Object element) {
-				return true;
-			}
-		});
-		column = new TableViewerColumn(viewer, SWT.NONE);
-
-		column.getColumn().setWidth(300);
-		column.getColumn().setText("Description");
-		column.setLabelProvider(new ColumnLabelProvider() {
-			@Override
-			public String getText(Object element) {
-				Todo todo = (Todo) element;
-				return todo.getDescription();
-			}
-		});
-
-		viewer.addSelectionChangedListener(new ISelectionChangedListener() {
-			@Override
-			public void selectionChanged(SelectionChangedEvent event) {
-				IStructuredSelection selection = (IStructuredSelection) viewer
-						.getSelection();
-				service.setSelection(selection.getFirstElement());
-			}
-		});
-	}
-
-	@Inject
-	@Optional
-	private void getNotified(
-			@UIEventTopic(
-					MyEventConstants.TOPIC_TODO_DATA_UPDATE) 
-			 	    String topic) {
-		if (viewer!=null) {
-			viewer.setInput(model.getTodos());
-		}
-	}
-
-	@Focus
-	private void setFocus() {
-		btnNewButton.setFocus();
-	}
+  @Focus
+  private void setFocus() {
+    btnNewButton.setFocus();
+  }
 
 }

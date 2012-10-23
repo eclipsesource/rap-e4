@@ -104,7 +104,7 @@ public class TodoDetailsPart {
 			// update the user interface
 			updateUserInterface(todo);
 		} else {
-			summary.setText("Nichts mehr");
+			summary.setText("");
 		}
 	}
 
