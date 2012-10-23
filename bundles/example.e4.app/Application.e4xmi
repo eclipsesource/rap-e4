@@ -15,13 +15,18 @@
     </children>
     <mainMenu xmi:id="_ePj4sBSDEeKHRJ2FKd4cYg" elementId="example.e4.app.menu.0">
       <children xsi:type="menu:Menu" xmi:id="_nWDtsBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.menu.1" label="File">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_oFdKUBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.handledmenuitem.0" label="Exit" command="_hwGxuszOEeG2hqUf-TXrxA"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_vnfYYBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.handledmenuitem.1" label="Save" command="_hwHYwMzOEeG2hqUf-TXrxA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_vnfYYBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.handledmenuitem.save" label="Save" command="_hwHYwMzOEeG2hqUf-TXrxA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_oFdKUBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.handledmenuitem.open" label="Open" command="_hwGxvszOEeG2hqUf-TXrxA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_u8GBwB0mEeKXt-1VWAhf3A" elementId="example.e4.app.handledmenuitem.exit" label="Exit" command="_hwGxuszOEeG2hqUf-TXrxA"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="__Ut2AB0mEeKXt-1VWAhf3A" elementId="example.e4.app.menu.0" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_CT_qkB0nEeKXt-1VWAhf3A" elementId="example.e4.app.handledmenuitem.about" label="About" tooltip="About" command="_hwHYw8zOEeG2hqUf-TXrxA"/>
       </children>
     </mainMenu>
     <trimBars xmi:id="_r4YpYBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_tELuIBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.toolbar.0">
-        <children xsi:type="menu:HandledToolItem" xmi:id="_td_8UBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.handledtoolitem.0" label="Open" iconURI="platform:/plugin/example.e4.app/icons/save_edit.gif" command="_hwGxvszOEeG2hqUf-TXrxA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_td_8UBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.handledtoolitem.0" label="Open" iconURI="platform:/plugin/example.e4.app/icons/opentype.gif" tooltip="Open file" command="_hwGxvszOEeG2hqUf-TXrxA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_-0peoBxREeKc3ruraG9Amg" elementId="example.e4.app.handledtoolitem.0" label="Save" iconURI="platform:/plugin/example.e4.app/icons/save_edit.gif" tooltip="Save" command="_hwHYwMzOEeG2hqUf-TXrxA"/>
       </children>
     </trimBars>
   </children>
