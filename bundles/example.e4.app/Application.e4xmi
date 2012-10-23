@@ -15,8 +15,8 @@
     </children>
     <mainMenu xmi:id="_ePj4sBSDEeKHRJ2FKd4cYg" elementId="example.e4.app.menu.0">
       <children xsi:type="menu:Menu" xmi:id="_nWDtsBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.menu.1" label="File">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_vnfYYBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.handledmenuitem.save" label="Save" command="_hwHYwMzOEeG2hqUf-TXrxA"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_oFdKUBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.handledmenuitem.open" label="Open" command="_hwGxvszOEeG2hqUf-TXrxA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_vnfYYBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.handledmenuitem.save" label="Save" command="_hwHYwMzOEeG2hqUf-TXrxA"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_u8GBwB0mEeKXt-1VWAhf3A" elementId="example.e4.app.handledmenuitem.exit" label="Exit" command="_hwGxuszOEeG2hqUf-TXrxA"/>
       </children>
       <children xsi:type="menu:Menu" xmi:id="__Ut2AB0mEeKXt-1VWAhf3A" elementId="example.e4.app.menu.0" label="Help">
@@ -25,7 +25,7 @@
     </mainMenu>
     <trimBars xmi:id="_r4YpYBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_tELuIBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.toolbar.0">
-        <children xsi:type="menu:HandledToolItem" xmi:id="_td_8UBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.handledtoolitem.0" label="Open" iconURI="platform:/plugin/example.e4.app/icons/opentype.gif" tooltip="Open file" command="_hwGxvszOEeG2hqUf-TXrxA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_td_8UBSEEeKHRJ2FKd4cYg" elementId="example.e4.app.handledtoolitem.0" label="Add" iconURI="platform:/plugin/example.e4.app/icons/add_obj.gif" tooltip="Add an item" command="_NesEkB0rEeKXt-1VWAhf3A"/>
         <children xsi:type="menu:HandledToolItem" xmi:id="_-0peoBxREeKc3ruraG9Amg" elementId="example.e4.app.handledtoolitem.0" label="Save" iconURI="platform:/plugin/example.e4.app/icons/save_edit.gif" tooltip="Save" command="_hwHYwMzOEeG2hqUf-TXrxA"/>
       </children>
     </trimBars>
@@ -34,6 +34,7 @@
   <handlers xmi:id="_hwGxv8zOEeG2hqUf-TXrxA" contributionURI="bundleclass://example.e4.app/example.e4.app.handlers.OpenHandler" command="_hwGxvszOEeG2hqUf-TXrxA"/>
   <handlers xmi:id="_hwHYwczOEeG2hqUf-TXrxA" contributionURI="bundleclass://example.e4.app/example.e4.app.handlers.SaveHandler" command="_hwHYwMzOEeG2hqUf-TXrxA"/>
   <handlers xmi:id="_hwHYxMzOEeG2hqUf-TXrxA" contributionURI="bundleclass://example.e4.app/example.e4.app.handlers.AboutHandler" command="_hwHYw8zOEeG2hqUf-TXrxA"/>
+  <handlers xmi:id="_LxlpkB0rEeKXt-1VWAhf3A" elementId="" contributionURI="bundleclass://example.e4.app/example.e4.app.handlers.AddHandler" command="_NesEkB0rEeKXt-1VWAhf3A"/>
   <bindingTables xmi:id="_hwGxvMzOEeG2hqUf-TXrxA" bindingContext="_hwGxsczOEeG2hqUf-TXrxA">
     <bindings xmi:id="_hwGxvczOEeG2hqUf-TXrxA" keySequence="M1+Q" command="_hwGxuszOEeG2hqUf-TXrxA"/>
     <bindings xmi:id="_hwGxwMzOEeG2hqUf-TXrxA" keySequence="M1+O" command="_hwGxvszOEeG2hqUf-TXrxA"/>
@@ -48,6 +49,7 @@
   <commands xmi:id="_hwGxvszOEeG2hqUf-TXrxA" elementId="example.e4.app.open" commandName="openCommand"/>
   <commands xmi:id="_hwHYwMzOEeG2hqUf-TXrxA" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
   <commands xmi:id="_hwHYw8zOEeG2hqUf-TXrxA" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <commands xmi:id="_NesEkB0rEeKXt-1VWAhf3A" elementId="example.e4.app.command.addItem" commandName="addItemCommand"/>
   <addons xmi:id="_hwGxtMzOEeG2hqUf-TXrxA" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_-df1QBSCEeKHRJ2FKd4cYg" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
   <addons xmi:id="_hwGxtczOEeG2hqUf-TXrxA" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
